@@ -1,0 +1,244 @@
+body {
+  color: #fff;
+  font-size: 16px;
+  font-family: "Roboto Serif", serif;
+}
+.weather-app {
+  background: rgb(30, 165, 236);
+  margin: 30px 60px;
+  padding: 15px 40px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+h1 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 30px;
+}
+
+h2 {
+  padding: 0;
+  font-size: 16px;
+}
+
+h3 {
+  padding: 0;
+  font-size: 16px;
+}
+
+.condensation {
+  display: block;
+  margin: 30px auto;
+  width: 150px;
+  position: absolute;
+  top: 150px;
+  right: 400px;
+}
+
+.temperature {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  left: 73px;
+}
+
+.link-style1 {
+  padding-left: 20px;
+  position: absolute;
+  top: 180px;
+}
+
+.link-style2 {
+  padding-left: 15px;
+  position: absolute;
+  top: -9px;
+}
+
+.link-style1,
+.link-style2 {
+  text-decoration: none;
+}
+
+.temp-style {
+  font-size: 30px;
+  padding-left: 1px;
+}
+.highest,
+.lowest {
+  position: absolute;
+  left: 300px;
+}
+
+.highest {
+  top: 180px;
+}
+
+.lowest {
+  display: block;
+  left: 307px;
+  top: 202px;
+}
+
+.general {
+  display: block;
+  padding: 10px;
+  margin-top: 1px;
+}
+
+.background {
+  background-color: #edf6fc;
+  color: #555;
+}
+.background2 {
+  background-color: #a1d4f3;
+  color: #555;
+}
+.background3 {
+  background-color: #a3d7f5;
+  color: #555;
+}
+.background4 {
+  background-color: #a4d9f6;
+  color: #555;
+}
+.background5 {
+  background-color: #a4daf7;
+  color: #555;
+}
+
+.background6 {
+  background-color: #a3d7f5;
+  color: #555;
+}
+
+.background7 {
+  background-color: #a1d5f3;
+  color: #555;
+}
+.background8 {
+  background-color: #9fd1f1;
+  color: #555;
+}
+
+div.row {
+  width: 100%;
+  margin-top: 10px;
+  padding: 5px 30px 15px 20px;
+}
+
+div.col1,
+.col2,
+.col3,
+.col4,
+.col5,
+.col6,
+.col7,
+.col8 {
+  position: absolute;
+  top: 230px;
+  margin: 75px;
+  font-size: 15px;
+}
+
+div.col1 {
+  left: 170px;
+}
+div.col2 {
+  left: 280px;
+}
+div.col3 {
+  left: 410px;
+}
+div.col4 {
+  left: 540px;
+}
+div.col5 {
+  left: 650px;
+}
+div.col6 {
+  right: -930px;
+}
+div.col7 {
+  right: -1050px;
+}
+
+div.col8 {
+  right: -1180px;
+}
+
+div.col9,
+.col10,
+.col11,
+.col12,
+.col13,
+.col14,
+.col15,
+.col16 {
+  width: 12%;
+  white-space: wrap;
+  font-size: small;
+}
+
+.style,
+.style1 {
+  color: #0e54bd;
+  text-decoration: none;
+}
+
+.style1:hover,
+.style:hover {
+  cursor: pointer;
+  color: black;
+}
+
+.footer {
+  position: relative;
+  top: -20px;
+  padding: 5px;
+}
+
+.card-title1,
+.card-title2,
+.card-title3,
+.card-title4,
+.card-title5,
+.card-title6,
+.card-title7,
+.card-title8 {
+  padding: 13px;
+  font-size: 11px;
+}
+.emoji1,
+.emoji2,
+.emoji3,
+.emoji4,
+.emoji5,
+.emoji6,
+.emoji7,
+.emoji8 {
+  padding: 20px;
+  position: relative;
+  top: -10px;
+}
+.coldest1,
+.coldest2,
+.coldest3,
+.coldest4,
+.coldest5,
+.coldest6,
+.coldest7,
+.coldest8 {
+  padding: 0 25px;
+}
+
+.warmest1,
+.warmest2,
+.warmest3,
+.warmest4,
+.warmest5,
+.warmest6,
+.warmest7,
+.warmest8 {
+  padding: 20px;
+}

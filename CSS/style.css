@@ -7,14 +7,6 @@ body {
 body:first-letter {
   text-transform: capitalize;
 }
-.weather-app {
-  background: rgb(30, 165, 236);
-  margin: 60px 120px;
-  padding: 15px 40px;
-  border: 1px solid #fff;
-  border-radius: 8px;
-  max-width: 100%;
-}
 
 h1 {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -31,10 +23,28 @@ h3 {
   font-size: 16px;
 }
 
-li{
+li {
   text-transform: capitalize;
   list-style: none;
 }
+
+.weather-app {
+  background: rgb(30, 165, 236);
+  margin: 60px 120px;
+  padding: 15px 40px;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  max-width: 100%;
+}
+
+.link-style1 {
+  color: black;
+  cursor: default;
+}
+.link-style1:hover {
+  text-decoration: none;
+}
+
 .condensation {
   display: block;
   margin: 30px auto;

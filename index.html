@@ -19,13 +19,20 @@
 
 <body>
     <div class="container">
+        <div class="search"></div>
         <div class="weather-app">
-            <h1 id="city">
+            <h1 class="city" id="city">
+                <div class="temp"></div>
+                <div class="decription"></div>
+                <div class="humidity"></div>
+                <div class="wind"></div>
+
                 Zurich Switzerland
             </h1>
 
             <form id="city-form">
-                <input type="text" id="city-input" placeholder="search location" autofocus="on" autocomplete="off">
+                <input type="text" classc="search-bar" id="city-input" placeholder="search location" autofocus="on"
+                    autocomplete="off">
                 <input type="submit" value="Search" class="btn btn-primary">
                 <button type="button" id="current-location-button" class="btn btn-success">Current</button>
             </form>
@@ -33,10 +40,10 @@
             <br>
             <br>
             <h2>
-                ☁☁ <span id="temperature" class="temp-style"> 11 </span> <a href="#" id="c-temp" class="link-style1">℃
-                </a> <span class="highest"> 12° </span>
-                <span class="lowest"> 2° </span>
-                <span class="temperature"> <a href="#" id="f-temp" class="link-style2"> ℉ </a> </span>
+                <img src="https://assets.msn.com/weathermapdata/1/static/weather/Icons/taskbar_v3/Condition_Card/MostlyCloudyDayV2.svg"
+                    alt="" class="icon">
+                <span id="temperature" class="temp-style"> 11 </span> <a href="#" id="c-temp" class="link-style1">℃ |
+                </a><a href="#" id="f-temp" class="link-style2">℉</a>
 
             </h2>
             <p class="condensation">
@@ -46,28 +53,29 @@
             </p>
             <br>
 
-            <h3 class="general">
+            <h3 id="description" class="general">
                 Mostly cloudy Sun 19, 2:11 PM
             </h3>
 
 
             <br>
 
+
+
             <div class="row">
-                <div class="col1"> 4PM </div>
-                <div class="col2"> 7PM </div>
-                <div class="col3"> 10PM </div>
-                <div class="col4"> 1AM </div>
-                <div class="col5"> 4AM </div>
-                <div class="col6"> 7AM </div>
-                <div class="col7"> 10AM </div>
-                <div class="col8"> 1PM </div>
+                <div class="col-sm-2"> 4PM </div>
+                <div class="col-sm-2"> 7PM </div>
+                <div class="col-sm-2"> 10PM </div>
+                <div class="col-sm-2"> 1AM </div>
+                <div class="col-sm-2"> 4AM </div>
+                <div class="col-sm-2"> 7AM </div>
+
 
             </div>
 
             <hr>
             <div class="row">
-                <div class="col9">
+                <div class="col-sm-2">
                     <div class="card">
                         <div class="card-body background">
                             <h5 class="card-title1">Sun 19</h5>
@@ -81,7 +89,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col10">
+                <div class="col-sm-2">
                     <div class="card">
                         <div class="card-body background2">
                             <h5 class="card-title2">Mon 20</h5>
@@ -95,7 +103,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col11">
+                <div class="col-sm-2">
                     <div class="card">
                         <div class="card-body background3">
                             <h5 class="card-title3">Tue 21</h5>
@@ -108,7 +116,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col12">
+                <div class="col-sm-2">
                     <div class="card">
                         <div class="card-body background4">
                             <h5 class="card-title4">Wed 22</h5>
@@ -121,7 +129,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col13">
+                <div class="col-sm-2">
                     <div class="card">
                         <div class="card-body background5">
                             <h5 class="card-title5">Thu 23</h5>
@@ -134,7 +142,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col14">
+                <div class="col-sm-2">
                     <div class="card">
                         <div class="card-body background6">
                             <h5 class="card-title6">Fri 24</h5>
@@ -147,32 +155,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col15">
-                    <div class="card">
-                        <div class="card-body background7">
-                            <h5 class="card-title7">Sat 25 </h5>
-                            <p class="card-text"><span class="emoji7">🌨️</span>
-                                <br>
-                                <span class="warmest7">8°</span>
-                                <br>
-                                <span class="coldest7">0°</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col16">
-                    <div class="card">
-                        <div class="card-body background8">
-                            <h5 class="card-title8">Sun 26 </h5>
-                            <p class="card-text"><span class="emoji8">☁</span>
-                                <br>
-                                <span class="warmest8">6°</span>
-                                <br>
-                                <span class="coldest8">1°</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
+
+
+
             </div>
 
             <br>
@@ -189,47 +174,7 @@
                 </div>
             </footer>
         </div>
-        <script src="JS/index.js"></script>
+        <script src="JS/index.js" defer></script>
 </body>
 
 </html>
-
-let cityForm = document.querySelector("city-form");
-cityForm.addEventListener("submit", pageReload);
-
-function showCity(response) {
-event.preventDefault();
-let h1 = document.querySelector("h1");
-//let temperature = Math.round(response.data.main.temp);
-h1.innerHTML = `${city}`;
-//h1.innerHTML = `${temperature}° in ${response.data.name}`;
-}
-
-
-
-function displayWeather(response) {
-let weatherDiv = document.querySelector("#weather");
-let temperature = Math.round(response.data.main.temp);
-let description = response.data.weather[0].description;
-
-weatherDiv.innerHTML = `It is ${temperature} degrees, ${description}, in ${response.data.name
-}`;
-}
-
-let city = "Rome";
-let key = "5f472b7acba333cd8a035ea85a0d4d4c";
-let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`;
-
-axios.get(url).then(displayWeather);
-
-
-
-function retrievePosition(position) {
-let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
-let lat = position.coords.latitude;
-let lon = position.coords.longitude;
-let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
-axios.get(url).then(showWeather);
-}
-
-navigator.geolocation.getCurrentPosition(retrievePosition);

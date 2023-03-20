@@ -45,14 +45,14 @@ function displayWeatherCondition(response) {
         response.data.main.temp
     );
 
-    
-    
+
+
     //document.querySelector("#humidity").innerHTML = response.data.main.humidity;
     //document.querySelector("#precipitation").innerHTML = response.data.main;
     //document.querySelector("#wind").innerHTML = Math.round(
     //response.data.wind.speed);
     //document.querySelector("#description").innerHTML =
-       // response.data.weather[0].main;
+    // response.data.weather[0].main;
 }
 
 
@@ -217,8 +217,51 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 //button.addEventListener("click", getCurrentPosition);
 
 
+let weather = {
+    apiKey: "b7d735a7d28a342e84165d7055229f3f",
+    fetchWeather: function (city) {
+        fetch(
+            "https://api.openweathermap.org/data/2.5/weather?q="
+            + city
+            + "&units=metric&appid="
+            + this.apiKey)
+            .then((response) => response.json())
+            .then((data) => this.displayWeather(data));
+    },
 
+    displayWeather: function (data) {
+        const { name } = data;
+        const { icon, description } = data.weather[0];
+        const { temp, humidity } = data.main;
+        const { speed } = data.wind;
+        console.log(name, icon, description, temp, humidity, speed)
+        document.querySelector(".city").innerHTML = "Weather in" + name;
+        document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
+        document.querySelector(".description").innerHTML = description;
+        document.querySelector(".temp").innerHTML = temp + "°C";
+        document.querySelector(".humidity").innerHTML = "Humidity: " + humidity + "%";
+        document.querySelector(".wind").innerHTML = "Wind speed: " + speed + "km/h";
+        document.querySelector(".weather").classList.remove("loading");
+        document.body.style.backgroundImage = url("https://source.unsplash.com/1600x900/?" + name);
+    },
+    search: function () {
+        this.fetchWeather(document.querySelector(".search-bar").value);
+    }
+};
 
+document
+    .querySelector(".search-bar")
+    .addEventListener("click", function () {
+        weather.search();
+    });
+
+document.querySelector(".seach-bar").addEventListener("keyup", function (event) {
+    if (event.keyup == "Enter") {
+        weather.search();
+    }
+});
+
+weather.fetchWeather("Zurich");
 
 
 

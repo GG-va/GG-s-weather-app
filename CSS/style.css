@@ -44,6 +44,13 @@ li {
 .link-style1:hover {
   text-decoration: none;
 }
+.link-style2 {
+  color: black;
+  cursor: default;
+}
+.link-style2:hover {
+  text-decoration: none;
+}
 
 .condensation {
   display: block;

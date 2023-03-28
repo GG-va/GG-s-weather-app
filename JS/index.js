@@ -34,7 +34,37 @@ function formatDate(timestamp) {
         "Dec"
     ];
     let month = months[date.getMonth()];
-    return `${date}`;
+    return `${month}, ${day} ${hours}:${minutes}`;
+}
+
+function displayForecast() {
+    let forecastElement = document.querySelector("#forecast");
+
+    let forecastHTML = `<div class="row">`;
+
+    let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
+
+    days.forEach(function (day) {
+        forecastHTML = forecastHTML + `
+                        <div class="col-2">
+                            <div class="weather-forecast-date">${day}
+                            </div>
+                            <img src="https://openweathermap.org/img/wn/04d@2x.png" alt="" width="42">
+                            <div class="weather-forecast-temperature">
+                                <span class="weather-forecast-temperature-max">
+                                    18°
+                                </span>
+
+                                <span class="weather-forecast-temperature-min">
+                                    12°
+                                </span>
+                        </div>
+                    </div> `;
+
+    })
+
+    forecastHTML = forecastHTML + `</div>`;
+    forecastElement.innerHTML = forecastHTML;
 }
 
 
@@ -102,6 +132,7 @@ celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 
 search("New York");
+displayForecast();
 
 
 

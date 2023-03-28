@@ -140,51 +140,7 @@ div.row {
 
 .footer {
   position: relative;
-  top: -20px;
-  padding: 5px;
-}
-
-.card-title1,
-.card-title2,
-.card-title3,
-.card-title4,
-.card-title5,
-.card-title6,
-.card-title7,
-.card-title8 {
-  text-align: center;
-  font-size: 13px;
-}
-.emoji1,
-.emoji2,
-.emoji3,
-.emoji4,
-.emoji5,
-.emoji6,
-.emoji7,
-.emoji8 {
-  padding-left: 35px;
-  position: relative;
-  top: 1px;
-}
-.coldest1,
-.coldest2,
-.coldest3,
-.coldest4,
-.coldest5,
-.coldest6,
-.coldest7,
-.coldest8 {
-  padding-left: 35px;
-}
-
-.warmest1,
-.warmest2,
-.warmest3,
-.warmest4,
-.warmest5,
-.warmest6,
-.warmest7,
-.warmest8 {
-  padding-left: 35px;
+  top: 25px;
+  left: -5px;
+  padding: 20px;
 }
